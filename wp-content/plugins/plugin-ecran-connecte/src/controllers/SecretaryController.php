@@ -101,14 +101,12 @@ class SecretaryController extends UserController
         $television = new TelevisionController();
         return
             $this->view->displayStartMultiSelect() .
-            $this->view->displayTitleSelect('student', 'Étudiants', true) .
             $this->view->displayTitleSelect('teacher', 'Enseignants') .
             $this->view->displayTitleSelect('studyDirector', 'Directeurs d\'études') .
             $this->view->displayTitleSelect('secretary', 'Secrétaires') .
             $this->view->displayTitleSelect('technician', 'Technicien') .
             $this->view->displayTitleSelect('television', 'Télévisions') .
             $this->view->displayEndOfTitle() .
-            $this->view->displayContentSelect('student', $student->insert(), true) .
             $this->view->displayContentSelect('teacher', $teacher->insert()) .
             $this->view->displayContentSelect('studyDirector', $studyDirector->insert()) .
             $this->view->displayContentSelect('secretary', $secretary->insert()) .
